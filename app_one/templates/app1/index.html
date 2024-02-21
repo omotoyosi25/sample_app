@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{%load static %}
+
+
+
+{%block content%}
+    <p>my name is {{n|capfirst}}</p>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Omnis natus nesciunt dicta fuga dolorem voluptatibus, ipsa debitis pariatur totam, repellendus minima nihil voluptatem harum voluptatum eligendi ea facere illo reprehenderit.</p>
+    <div>
+        <img class="bg-1" src="{%static 'images/vintage.jpg'%}" alt="vintage">
+    </div>
+    <ol>
+        <li>list item one</li>
+        <li>list item two</li>
+        <li>list item three</li>
+        <li>list item four</li>
+    </ol>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTU7meA5D2zTuj9AECjEQR6lv9C0PTa5BU4k4IkxNxOFg&s" alt="backgroung" width="100" height="100">
+    
+    <div>
+        {% if course_list %}
+            {%for courses in course_list %}
+            <p>{{courses}}</p>
+            {% endfor %}
+        {%else%}
+            <p>no courses available!</p>
+        {%endif%}
+    </div>
+{%endblock content%}
+
+
+{%block footer_content%}
+
+<p>tis is the index footer content</p>
+
+{%endblock footer_content%}
+</body>
+</html>
